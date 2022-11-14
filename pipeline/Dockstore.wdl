@@ -27,8 +27,8 @@
 ## Users are responsible for checking that they are authorized to run all programs
 ## before running this script.
 
-import "https://raw.githubusercontent.com/ParkerICI/mesmer-wdl-workflow/master/mesmerSeg.wdl" as mesmer
-import "https://raw.githubusercontent.com/ParkerICI/mesmer-wdl-workflow/master/collapseChannels.wdl" as tifftools
+import "https://raw.githubusercontent.com/CANDELbio/cell-seg-and-typing-pipeline/master/pipeline/mesmerSeg.wdl" as mesmer
+import "https://raw.githubusercontent.com/CANDELbio/cell-seg-and-typing-pipeline/master/pipeline/collapseChannels.wdl" as tifftools
 
 workflow segmentation {
     File multi_tiff

@@ -1,0 +1,62 @@
+cell_types:
+  CD4 T cell:
+    - CD45
+    - CD3
+    - CD4
+  CD8 T cell:
+    - CD45
+    - CD3
+    - CD8
+  Macrophage:
+    - CD45
+    - CD68
+  B cell:
+    - CD45
+    - CD20
+  NK cell:
+    - CD45
+    - CD56
+  Tumor:
+    - SOX10
+  Dendritic:
+    - CD45
+    - DC-SIGN
+  Myeloid:
+    - CD11b
+    - CD45
+  Plasma cell:
+    - CD45
+    - CD138
+  Endothelial:
+    - CD31
+  Neutrophil:
+    - CD45
+    - MPO
+  Fibroblast:
+    - SMA
+  Immune:
+    - CD45
+  Treg:
+    - FOXP3
+  T cell:
+    - CD3
+    - CD45
+hierarchy:
+  Epithelial:
+    - Endothelial
+    - Fibroblast
+  Tumor:
+    - Tumor
+  Immune:
+    T cell:
+      - CD4 T cell
+      - CD8 T cell
+    Other Immune:
+      - Treg
+      - Neutrophil
+      - Plasma cell
+      - Myeloid
+      - Dendritic
+      - NK cell
+      - B cell
+      - Macrophage

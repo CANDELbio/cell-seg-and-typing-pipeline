@@ -1,0 +1,5 @@
+{
+  "listChannels.multi_tiff": "input_multi.tiff",
+  "listChannels.rename_to_sampleid": true,
+  "listChannels.sample_id": "mysample1"
+}

@@ -196,14 +196,14 @@ def calculate_percentile_weights(pixel_stack, thresh=0.5):
     in the channel, it will be given the value 0.01, or 87% 0.13 and
     so on."""
     perc_thresh = int(100 * thresh)
-    output = np.zeros_like(pixel_stack)
+    output = np.zeros(pixel_stack.shape, dtype=np.float32)
     for i in range(0, pixel_stack.shape[1]):
         this_chan = pixel_stack[:, i]
         this_chan_nz = this_chan[np.where(this_chan > 0.01)]
         breaks = np.arange(perc_thresh, 100, 1)
         perc = np.percentile(this_chan_nz, breaks)
         break_lookup = np.searchsorted(perc, this_chan)
-        output[:, i] = 1.0 - (((np.searchsorted(perc, this_chan) - 1) * 0.01) + thresh)
+        output[:, i] = 1.0 - (((break_lookup) - 1) * 0.01) + thresh)
     return output
 
 

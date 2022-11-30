@@ -57,7 +57,7 @@ args = parser.parse_args()
 
 def alloc_matrix2d(W, H):
     """ Pre-allocate a 2D matrix of empty lists. """
-    return [ [ [] for i in range(W) ] for j in range(H) ]
+    return [ [ [] for i in range(H) ] for j in range(W) ]
 
 
 def find_dist(overlap_seg_idx, centroids, pix_idx):
